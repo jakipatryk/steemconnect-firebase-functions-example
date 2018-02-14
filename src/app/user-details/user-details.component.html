@@ -1,0 +1,8 @@
+<div *ngIf="auth.user | async as user; else guest">
+  <h3>You are logged into Firebase via SteemConnect!</h3>
+  <p>That's your uid: {{ user.uid }}</p>
+  <button (click)="auth.signout()" class="btn btn-warning">Signout</button>
+</div>
+<ng-template #guest>
+  <button (click)="auth.login()" class="btn btn-primary">Login with SteemConnect!</button>
+</ng-template>
