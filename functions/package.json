@@ -11,6 +11,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
+    "cors": "^2.8.4",
     "firebase-admin": "~5.8.1",
     "firebase-functions": "^0.8.1",
     "steemconnect-firebase-functions": "^1.0.0"
