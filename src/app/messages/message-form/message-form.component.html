@@ -1,0 +1,8 @@
+<form [formGroup]="messageForm" (ngSubmit)="addMessage()">
+  <div class="form-group">
+    <label for="textInput">Your message:</label>
+    <input formControlName="text" id="textInput" class="form-control" aria-describedby="textHelper">
+    <small id="textHelper" class="form-text text-muted">It's NOT gonna be published on the Steem blockchain.</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
