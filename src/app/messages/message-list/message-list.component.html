@@ -1,0 +1,10 @@
+<div *ngIf="auth.user | async as user">
+  <app-message-form (messageEmitter)="addMessage($event)"></app-message-form>
+</div>
+
+
+<div *ngIf="!(messages | async)">
+  Loading messages...
+</div>
+
+<app-message-details *ngFor="let message of messages | async" [message]="message"></app-message-details>
