@@ -4,16 +4,12 @@ import { Observable } from 'rxjs/Observable';
 import { switchMap } from 'rxjs/operators';
 
 import { AngularFireAuth } from 'angularfire2/auth';
-import {
-  AngularFirestore,
-  AngularFirestoreDocument
-} from 'angularfire2/firestore';
 
 @Injectable()
 export class AuthService {
   user: Observable<any>;
 
-  constructor(private afAuth: AngularFireAuth, private afs: AngularFirestore) {
+  constructor(private afAuth: AngularFireAuth) {
     this.user = this.afAuth.authState;
   }
 
